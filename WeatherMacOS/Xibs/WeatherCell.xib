@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="haF-VJ-Yo6">
+                    <rect key="frame" x="30" y="30" width="65" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="K9H-hg-t8m"/>
+                        <constraint firstAttribute="width" constant="65" id="Qus-Iy-5Ov"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Clear" id="Bfs-TS-DNQ"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EhV-gP-wdH">
+                    <rect key="frame" x="6" y="4" width="28" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100" id="OCf-3I-UPP">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v8M-Qh-dw2">
+                    <rect key="frame" x="91" y="4" width="28" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100" id="ofh-f5-Pyk">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kwv-Xo-CV4">
+                    <rect key="frame" x="35" y="102" width="54" height="23"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Monday" id="UJm-cy-Gnd">
+                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="v8M-Qh-dw2" secondAttribute="bottom" constant="4" id="JJP-Ge-azI"/>
+                <constraint firstItem="haF-VJ-Yo6" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="KkQ-QJ-owi"/>
+                <constraint firstItem="kwv-Xo-CV4" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Oa1-BL-dU9"/>
+                <constraint firstAttribute="bottom" secondItem="EhV-gP-wdH" secondAttribute="bottom" constant="4" id="cw4-6a-Cyo"/>
+                <constraint firstAttribute="trailing" secondItem="v8M-Qh-dw2" secondAttribute="trailing" constant="8" id="gSY-dK-uVQ"/>
+                <constraint firstItem="EhV-gP-wdH" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="jCk-wY-0Ke"/>
+                <constraint firstItem="haF-VJ-Yo6" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="rzY-V6-s8Y"/>
+                <constraint firstItem="kwv-Xo-CV4" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="uKq-LH-CDb"/>
+            </constraints>
+            <point key="canvasLocation" x="-165" y="81"/>
+        </customView>
+        <collectionViewItem id="9kX-Ju-lqN" customClass="WeatherCell" customModule="WeatherMacOS" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLbl" destination="kwv-Xo-CV4" id="q8e-LQ-rsu"/>
+                <outlet property="highTempLbl" destination="v8M-Qh-dw2" id="20W-sG-Z9B"/>
+                <outlet property="lowTempLbl" destination="EhV-gP-wdH" id="0dU-Oe-6er"/>
+                <outlet property="view" destination="c22-O7-iKe" id="Qpa-r8-sog"/>
+                <outlet property="weatherCellImage" destination="haF-VJ-Yo6" id="9GW-cb-BeB"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+    <resources>
+        <image name="Clear" width="107" height="107"/>
+    </resources>
+</document>
