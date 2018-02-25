@@ -22,3 +22,6 @@ Value: YES
 - https://openweathermap.org/current
 - cocopods install and use weahter api with alamofire and swiftyJSON
 
+
+
+- Quit application and open somehting into browser

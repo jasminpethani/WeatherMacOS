@@ -14,8 +14,7 @@ class WeatherCell: NSCollectionViewItem {
      @IBOutlet weak var dayLbl: NSTextField!
      @IBOutlet weak var lowTempLbl: NSTextField!
      @IBOutlet weak var highTempLbl: NSTextField!
-     
-      @IBOutlet weak var weatherCellImage: NSImageView!
+     @IBOutlet weak var weatherCellImage: NSImageView!
 
      override func viewDidLoad() {
           super.viewDidLoad()
@@ -24,4 +23,9 @@ class WeatherCell: NSCollectionViewItem {
           self.view.layer?.cornerRadius = 5.0
      }
     
+     func configureCell(_ model: Forecast) {
+          self.dayLbl.stringValue = model.date
+          self.highTempLbl.stringValue = "\(model.highTemp)"
+          self.lowTempLbl.stringValue = "\(model.lowTemp)"
+     }
 }

@@ -16,8 +16,11 @@
 		CBBD82FE20335EEB00D52828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBBD82FD20335EEB00D52828 /* Assets.xcassets */; };
 		CBBD830120335EEB00D52828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBD82FF20335EEB00D52828 /* Main.storyboard */; };
 		CBBD830A2033636200D52828 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CBBD83092033636200D52828 /* README.txt */; };
+		CBD7AE1F2041D7EE0036E185 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7AE1E2041D7EE0036E185 /* Forecast.swift */; };
+		CBD7AE222041DA170036E185 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7AE212041DA170036E185 /* Extension+Date.swift */; };
 		CBF44F01203B47CD00C02477 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF44F00203B47CD00C02477 /* WeatherCell.xib */; };
 		CBF44F03203B47F800C02477 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF44F02203B47F800C02477 /* WeatherCell.swift */; };
+		CBFF7C7A2042ACB5001EF3D9 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFF7C792042ACB5001EF3D9 /* Extension+Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +38,11 @@
 		CBBD830220335EEB00D52828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBBD830320335EEB00D52828 /* WeatherMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherMacOS.entitlements; sourceTree = "<group>"; };
 		CBBD83092033636200D52828 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CBD7AE1E2041D7EE0036E185 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		CBD7AE212041DA170036E185 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		CBF44F00203B47CD00C02477 /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		CBF44F02203B47F800C02477 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		CBFF7C792042ACB5001EF3D9 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				CB4264B1203C98520037F4EC /* CurrentWeather.swift */,
+				CBD7AE1E2041D7EE0036E185 /* Forecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				CB2F9B82203B475E0033C684 /* Controller */,
 				CB2F9B83203B47630033C684 /* Xibs */,
 				CB4264AB203C8D390037F4EC /* Utilities */,
+				CBD7AE202041D9F30036E185 /* Extensions */,
 				CBBD82F920335EEB00D52828 /* AppDelegate.swift */,
 				CBBD82FD20335EEB00D52828 /* Assets.xcassets */,
 				CBBD82FF20335EEB00D52828 /* Main.storyboard */,
@@ -151,6 +159,15 @@
 				CBBD830320335EEB00D52828 /* WeatherMacOS.entitlements */,
 			);
 			path = WeatherMacOS;
+			sourceTree = "<group>";
+		};
+		CBD7AE202041D9F30036E185 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBD7AE212041DA170036E185 /* Extension+Date.swift */,
+				CBFF7C792042ACB5001EF3D9 /* Extension+Button.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +309,11 @@
 			files = (
 				CB4264B0203C93660037F4EC /* WeatherService.swift in Sources */,
 				CBBD82FC20335EEB00D52828 /* WeatherVC.swift in Sources */,
+				CBD7AE1F2041D7EE0036E185 /* Forecast.swift in Sources */,
 				CBBD82FA20335EEB00D52828 /* AppDelegate.swift in Sources */,
 				CBF44F03203B47F800C02477 /* WeatherCell.swift in Sources */,
+				CBD7AE222041DA170036E185 /* Extension+Date.swift in Sources */,
+				CBFF7C7A2042ACB5001EF3D9 /* Extension+Button.swift in Sources */,
 				CB4264B2203C98520037F4EC /* CurrentWeather.swift in Sources */,
 				CB4264AD203C8D530037F4EC /* Constants.swift in Sources */,
 			);
