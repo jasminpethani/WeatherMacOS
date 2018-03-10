@@ -14,12 +14,9 @@ class WeatherVC: NSViewController {
      @IBOutlet weak var todayDateLbl: NSTextField!
      @IBOutlet weak var tempratureLbl: NSTextField!
      @IBOutlet weak var locationLbl: NSTextField!
-     
      @IBOutlet weak var weatherImgView: NSImageView!
      @IBOutlet weak var weatherLbl: NSTextField!
-     
      @IBOutlet weak var collectionView: NSCollectionView!
-     
      @IBOutlet weak var powerByOpenWeatherBtn: NSButton!
      @IBOutlet weak var quitBtn: NSButton!
      
@@ -32,16 +29,18 @@ class WeatherVC: NSViewController {
           
           collectionView.dataSource = self
           collectionView.delegate = self
-          
-          updateUI()
      }
      
      override func viewWillAppear() {
+          NotificationCenter.default.addObserver(self, selector: #selector(WeatherVC.weatherDataDownloadNotif(_:)), name: NOTIFICATION_DOWNLOAD_WEATHER, object: nil)
           view.layer?.backgroundColor = CGColor(red: 0.29, green: 0.72, blue: 0.98, alpha: 1.0)
-          
+           updateUI()
           quitBtn.styleButtonText(button: quitBtn, buttonName: "Quit", fontColor: NSColor.darkGray, alignment: NSTextAlignment.center, font: "Avenir Next", size: 11.0)
-          
-          powerByOpenWeatherBtn.styleButtonText(button: powerByOpenWeatherBtn, buttonName: "Powered by Openweather Map", fontColor: NSColor.darkGray, alignment: NSTextAlignment.center, font: "Avenir Next", size: 11.0)
+          powerByOpenWeatherBtn.styleButtonText(button: powerByOpenWeatherBtn, buttonName: "Powered by OpenWeatherMap", fontColor: NSColor.darkGray, alignment: NSTextAlignment.center, font: "Avenir Next", size: 11.0)
+     }
+     
+     override func viewWillDisappear() {
+          NotificationCenter.default.removeObserver(self, name: NOTIFICATION_DOWNLOAD_WEATHER, object: nil)
      }
      
      fileprivate func updateUI() {
@@ -49,9 +48,9 @@ class WeatherVC: NSViewController {
           todayDateLbl.stringValue = weather.date
           tempratureLbl.stringValue = "\(weather.currentTemp)°"
           locationLbl.stringValue = weather.cityName
-          
           weatherImgView.image = NSImage(named: NSImage.Name(weather.weatherType))
           weatherLbl.stringValue = weather.weatherType
+          collectionView.reloadData()
      }
      
      override var representedObject: Any? {
@@ -62,13 +61,19 @@ class WeatherVC: NSViewController {
      
      // Openup browser
      @IBAction func powerByWeatherAppClicked(_ sender: Any) {
-          let url = URL(string: API_HOME_URL_WEATHER)!
+          let url = URL(string: HOME_URL)!
           NSWorkspace.shared.open(url)
      }
      
      @IBAction func quitApplication(_ sender: Any) {
           NSApplication.shared.terminate(nil)
      }
+     
+     @objc func weatherDataDownloadNotif(_ notification: Notification) {
+          updateUI()
+          print("Notification to update UI")
+     }
+     
 }
 
 //MARK:- CollectionView datasource and delegate methods

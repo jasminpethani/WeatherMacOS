@@ -16,18 +16,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
      func applicationDidFinishLaunching(_ aNotification: Notification) {
           // Will show title and action of status bar button item here
+          _ = LocationService.instance
+          
           statusItem.button?.title = "__°🌦"
           statusItem.action = #selector(AppDelegate.displayPopup(_:))
           
+          // 15min time interval update UI
+          let updateWeatherDataTimer = Timer.scheduledTimer(timeInterval: 15 * 60, target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
+          updateWeatherDataTimer.tolerance = 60
+     }
+     
+     @objc func downloadWeatherData() {
           WeatherService.instance.downloadWeatherDetail() {
+               self.statusItem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
+               
                WeatherService.instance.downloadForecast {
-                    DispatchQueue.main.async {
-                         self.statusItem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
-                    }
+                    NotificationCenter.default.post(name: NOTIFICATION_DOWNLOAD_WEATHER, object: nil)
+                    LocationService.instance.locationManager.stopUpdatingLocation()
                }
           }
-          
-        
      }
 
      func applicationWillTerminate(_ aNotification: Notification) {

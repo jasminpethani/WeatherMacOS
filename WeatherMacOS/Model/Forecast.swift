@@ -12,8 +12,8 @@ import SwiftyJSON
 class Forecast {
      var date:String!
      var weatherType: String!
-     var highTemp: Int!
-     var lowTemp: Int!
+     var highTemp: Int = 0
+     var lowTemp: Int = 0
      
      class func loadForecastFromData(_ data: Data) -> [Forecast] {
           guard let json = try? JSON(data: data) else { fatalError() }

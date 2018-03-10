@@ -707,11 +707,11 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherVC" id="XfG-lQ-9wD" customClass="WeatherVC" customModule="WeatherMacOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="449"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="406"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLh-vg-Zdj">
-                                <rect key="frame" x="20" y="268" width="360" height="161"/>
+                                <rect key="frame" x="20" y="225" width="360" height="161"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-B8-vU7">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="161"/>
@@ -802,7 +802,7 @@
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3p-fY-915">
-                                <rect key="frame" x="20" y="98" width="360" height="150"/>
+                                <rect key="frame" x="20" y="55" width="360" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="LsZ-xL-5ji">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -869,7 +869,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="795.5"/>
+            <point key="canvasLocation" x="75" y="774"/>
         </scene>
     </scenes>
     <resources>
