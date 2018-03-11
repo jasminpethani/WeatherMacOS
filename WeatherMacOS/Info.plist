@@ -28,6 +28,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+<<<<<<< HEAD
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -35,5 +36,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+=======
+>>>>>>> b79915f0a06a508e3217f11bbd2ab5c0d236d95c
 </dict>
 </plist>

@@ -11,6 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+<<<<<<< HEAD
      // object of NSStatusItem which let's you set icon on statubar (at top)
      let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
@@ -35,12 +36,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     LocationService.instance.locationManager.stopUpdatingLocation()
                }
           }
+=======
+
+
+     func applicationDidFinishLaunching(_ aNotification: Notification) {
+          // Insert code here to initialize your application
+>>>>>>> b79915f0a06a508e3217f11bbd2ab5c0d236d95c
      }
 
      func applicationWillTerminate(_ aNotification: Notification) {
           // Insert code here to tear down your application
      }
 
+<<<<<<< HEAD
      // MARK:- Other action methods
      
      @objc func displayPopup(_ sender: AnyObject) {
@@ -54,6 +62,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           popover.behavior = .transient
           popover.show(relativeTo: statusItem.button!.bounds, of: statusItem.button!, preferredEdge: NSRectEdge.maxY)
      }
+=======
+>>>>>>> b79915f0a06a508e3217f11bbd2ab5c0d236d95c
 
 }
 
